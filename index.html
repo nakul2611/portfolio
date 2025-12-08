@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nakul — ML & Software Portfolio</title>
+  <meta name="description" content="Nakul — Aspiring Machine Learning Engineer. Projects, skills, resume, contact." />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Canvas background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Nakul Vashishtha</div>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" id="resume-btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="home" tabindex="-1">
+      <div class="hero-left">
+        <h1>Hi, I'm <span class="accent">Nakul Vashishtha</span></h1>
+        <p class="lead">Aspiring Machine Learning Engineer • Python • Deep Learning • Model Deployment</p>
+        <div class="cta-row">
+          <a class="btn primary ripple" href="#projects">View Projects</a>
+          <a class="btn ghost ripple" href="https://github.com/nakul2611" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/nakul-vashishtha-70a869338/" aria-label="LinkedIn">LinkedIn</a> · <a href="" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="card-me">
+          <div class="avatar">N</div>
+          <div class="bio">
+            <strong>Nakul</strong>
+            <span>Machine Learning Enthusiast</span>
+            <p class="small">Learning hands-on ML & deployment. Building a portfolio for internship applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+      <p class="muted">Click a project to read more. All repos are on GitHub.</p>
+
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="proj-card" data-proj='{"title":"House Price Predictor","tech":"Python • Pandas • scikit-learn","desc":"Regression model with feature engineering, cross-validation and RMSE evaluation. Includes Jupyter notebook and README.","repo":"https://github.com/nakul2611/house-price-predictor"}'>
+          <div class="proj-thumb">🏠</div>
+          <div class="proj-body">
+            <h3>House Price Predictor</h3>
+            <p class="meta">Regression • scikit-learn</p>
+            <button class="btn small ripple view-btn">View</button>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="proj-card" data-proj='{"title":"Sentiment Analysis","tech":"Python • sklearn • Flask","desc":"Text classification pipeline using TF-IDF + logistic regression and a small Flask demo for inference.","repo":"https://github.com/nakul2611/sentiment-analysis"}'>
+          <div class="proj-thumb">💬</div>
+          <div class="proj-body">
+            <h3>Sentiment Analysis</h3>
+            <p class="meta">NLP • Flask</p>
+            <button class="btn small ripple view-btn">View</button>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="proj-card" data-proj='{"title":"Image Classifier (CNN)","tech":"TensorFlow • Keras","desc":"Small convolutional network example with training scripts and evaluation. Includes model weights and sample notebook.","repo":"https://github.com/nakul2611/image-classifier"}'>
+          <div class="proj-thumb">🖼️</div>
+          <div class="proj-body">
+            <h3>Image Classifier</h3>
+            <p class="meta">Deep Learning • Keras</p>
+            <button class="btn small ripple view-btn">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2>Skills</h2>
+      <div class="chips">
+        <span>Python</span> <span>NumPy</span> <span>Pandas</span> <span>scikit-learn</span>
+        <span>TensorFlow</span> <span>Git</span> <span>SQL</span> <span>Flask</span>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>About</h2>
+      <p>I’m starting my journey in machine learning with a 6–7 month roadmap focusing on Python, classical ML, and deployment. I build short, reproducible projects and upload code to GitHub.</p>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p>Interested in collaborating or offering internship opportunities? Email me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <small>© <span id="year"></span> Nakul • <a href="https://github.com/nakul2611" target="_blank" rel="noopener">github.com/nakul2611</a></small>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="proj-modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="proj-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <h3 id="proj-title"></h3>
+      <p id="proj-tech" class="meta"></p>
+      <p id="proj-desc"></p>
+      <p><a id="proj-repo" class="btn small primary" target="_blank" rel="noopener">Open Repository</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
